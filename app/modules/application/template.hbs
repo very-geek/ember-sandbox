@@ -8,12 +8,13 @@
 
 <main class="container" role="main">
   {{#if remindAuth}}
-    <section class="alert alert-warning">
+    <section class="alert alert-info" local-class="reminder">
       <div class="grid -middle -between">
         <strong>{{remindAuth}}</strong>
 
-        <a href="https://github.com/login/oauth/authorize?client_id=93fe8b9a14b53e85c248" class="btn btn-success">
-          Authorize with Github API
+        <a href="https://github.com/login/oauth/authorize?client_id=93fe8b9a14b53e85c248" class="btn btn-info">
+          <img src="/assets/images/github-light-32.png">
+          <strong>Authenticate with Github API</strong>
         </a>
       </div>
     </section>

@@ -7,5 +7,17 @@
 <hr />
 
 <main class="container" role="main">
+  {{#if remindAuth}}
+    <section class="alert alert-warning">
+      <div class="grid -middle -between">
+        <strong>{{remindAuth}}</strong>
+
+        <a href="https://github.com/login/oauth/authorize?client_id=93fe8b9a14b53e85c248" class="btn btn-success">
+          Authorize with Github API
+        </a>
+      </div>
+    </section>
+  {{/if}}
+
   {{outlet}}
 </main>

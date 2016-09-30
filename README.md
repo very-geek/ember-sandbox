@@ -69,3 +69,10 @@
     - 介绍：[Youtube](https://www.youtube.com/watch?v=AISmLOsWcfY) | [哔哩哔哩](http://www.bilibili.com/video/av6454526)
     - 总结：[Youtube]() | [哔哩哔哩]()
 </details>
+
+<details>
+    <summary>【番外篇】：如何实现 Github API OAuth2 鉴权</summary>
+
+- 练习：无
+- 视频：[Youtube](https://www.youtube.com/watch?v=doglVsRI2-w) | [哔哩哔哩](http://www.bilibili.com/video/av6478153)
+</details>

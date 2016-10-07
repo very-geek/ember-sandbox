@@ -1,4 +1,11 @@
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+var isProduction = process.env.EMBER_ENV === 'production';
+var isDevelopment = process.env.EMBER_ENV === 'development';
+var postcssOptions = {
+  rucksack: { alias: false, hexRGBA: false, fallbacks: true },
+  cssnano: { autoprefixer: false, core: isProduction, discardComments: isProduction, mergeIdents: false, reduceIdents: false, sourcemap: isDevelopment },
+  reporter: { plugins: ['postcss-browser-reporter'] }
+};
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
@@ -7,7 +14,11 @@ module.exports = function(defaults) {
         require('postcss-import'),
         require('postcss-extend'),
         require('postcss-cssnext'),
-        require('rucksack-css')({ alias: false, hexRGBA: false, fallbacks: true })
+        require('postcss-fallback'),
+        require('rucksack-css')(postcssOptions.rucksack),
+        require('cssnano')(postcssOptions.cssnano),
+        require('postcss-reporter')(postcssOptions.reporter),
+        require('postcss-browser-reporter')
       ],
       virtualModules: {
         'ui-colors': {

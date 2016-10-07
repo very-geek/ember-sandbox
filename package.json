@@ -20,6 +20,7 @@
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.2",
+    "cssnano": "^3.7.6",
     "ember-ajax": "^2.0.1",
     "ember-cli": "2.8.0",
     "ember-cli-app-version": "^2.0.0",
@@ -45,9 +46,12 @@
     "ember-truth-helpers": "1.2.0",
     "hack": "^0.7.7",
     "loader.js": "^4.0.1",
+    "postcss-browser-reporter": "^0.5.0",
     "postcss-cssnext": "^2.8.0",
     "postcss-extend": "^1.0.5",
+    "postcss-fallback": "^0.1.0",
     "postcss-import": "^8.1.2",
+    "postcss-reporter": "^1.4.1",
     "rucksack-css": "^0.8.6"
   }
 }

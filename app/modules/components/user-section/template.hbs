@@ -1,0 +1,10 @@
+{{yield (hash
+    header=(component "user-section/header")
+    list=(component "user-section/list")
+    detail=(component "user-section/detail")
+  ) (hash
+    users=users
+    currentUser=currentUser
+    selectUser=(action "selectUser")
+    clearUser=(action "clearUser")
+  )}}

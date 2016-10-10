@@ -1,0 +1,8 @@
+{{#if api.currentUser}}
+  <button type="button" class="btn btn-primary btn-block" onclick={{api.clearUser}}>
+    重置
+  </button>
+{{/if}}
+{{#each api.users as |user|}}
+  <li local-class="user-item" onclick={{action api.selectUser user}}>{{user.login}}</li>
+{{/each}}

@@ -68,7 +68,8 @@
 - 视频：
     - 介绍：[Youtube](https://www.youtube.com/watch?v=AISmLOsWcfY) | [哔哩哔哩](http://www.bilibili.com/video/av6454526)
     - 总结：
-        1. [Youtube](https://www.youtube.com/watch?v=KMLsOpzg2hg) | [哔哩哔哩](http://www.bilibili.com/video/av6584546)
+        1. 数据绑定专题：[Youtube](https://www.youtube.com/watch?v=KMLsOpzg2hg) | [哔哩哔哩](http://www.bilibili.com/video/av6584546)
+        2. [Youtube](https://www.youtube.com/watch?v=29tlYVE3mqo) | [哔哩哔哩](http://www.bilibili.com/video/av6629356)
 </details>
 
 <details>

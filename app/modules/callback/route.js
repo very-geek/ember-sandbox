@@ -1,5 +1,6 @@
 import Route from 'ember-route';
 import inject from 'ember-service/inject';
+import set from 'ember-metal/set';
 
 export default Route.extend({
   ajax: inject(),
@@ -12,7 +13,7 @@ export default Route.extend({
       ajax
         .request(`https://ember-sandbox.herokuapp.com/authenticate/${queryParams.code}`)
         .then(response => {
-          ajax.headers['Authorization'] = `token ${response.token}`;
+          set(ajax, 'headers', { 'Authorization': `token ${response.token}` });
           window.localStorage.setItem('github_api_oauth_token', response.token);
           this.controllerFor('application').set('remindAuth', null);
           this.transitionTo('index');

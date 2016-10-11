@@ -1,4 +1,4 @@
-export function initialize(/* appInstance */) {
+export function initialize() {
   document.body.classList = 'standard';
 }
 

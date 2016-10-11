@@ -1,3 +1,26 @@
+button {
+  cursor: pointer;
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+}
+
+.navigation {
+  position: absolute 0 auto 0 0;
+  width: 20vw;
+  background-color: white;
+  box-shadow: 1px 0 10px 0 color(black a(20%));
+
+  will-change: transform;
+  transform: translate3d(-100%, 0, 0);
+  transition: transform 250ms ease-out;
+
+  &.show {
+    transform: translateX(0);
+  }
+}
+
 .reminder img {
   width: 24px;
   height: 24px;

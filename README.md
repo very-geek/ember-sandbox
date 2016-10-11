@@ -78,3 +78,17 @@
 - 练习：无
 - 视频：[Youtube](https://www.youtube.com/watch?v=doglVsRI2-w) | [哔哩哔哩](http://www.bilibili.com/video/av6478153)
 </details>
+
+<details>
+    <summary>第 4 期：使用 Service 进行状态管理和交互</summary>
+
+- 练习：本期练习的主要目标是创建一个全局的滑动式菜单，最终效果可以参考：[ember-sandbox-004.surge.sh](http://ember-sandbox-004.surge.sh)
+    1. 菜单本身可以有两种解法（都可以尝试一下）：
+        - 可以是一个组件，放置在 `application/template.hbs` 的模版内
+        - 可以是一个独立的模板，通过 `application/route.js` 的 `renderTemplate` 钩子方法配合 `this.render` 方法进行渲染
+    1. 菜单的弹出状态可以用 CSS 来控制（动画效果可选），但最好不要用 jQuery 来操作 CSS 类，而是应该绑定一个状态变量来切换
+    1. 控制菜单弹出状态的方法应该可以随处使用（通过 Service 依赖注入实现），需要实现三个方法：显示，隐藏，切换
+    1. 绑定控制方法的交互组件（比如按钮）可以根据当前菜单的状态切换 disabled 状态（可选）
+        - 这些方法应该能够接收执行上下文（context），以便在任何地方调用的时候都可以正确的执行（可选）
+    1. 在初始化的时候直接注入该 Service 到常用的组件里去（比如 Routes / Controllers / Components 等，可选）
+</details>

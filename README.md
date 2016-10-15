@@ -91,4 +91,7 @@
     1. 绑定控制方法的交互组件（比如按钮）可以根据当前菜单的状态切换 disabled 状态（可选）
         - 这些方法应该能够接收执行上下文（context），以便在任何地方调用的时候都可以正确的执行（可选）
     1. 在初始化的时候直接注入该 Service 到常用的组件里去（比如 Routes / Controllers / Components 等，可选）
+    - 答案：[分支 004-final](https://github.com/very-geek/ember-sandbox/tree/004/final)
+- 视频：
+    - 总结：[Youtube](https://www.youtube.com/watch?v=QrNypFwF8Po) | [哔哩哔哩](http://www.bilibili.com/video/av6693855)
 </details>

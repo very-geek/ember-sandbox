@@ -1,7 +1,6 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/docs
 /dist
 /tmp
 
@@ -14,7 +13,7 @@
 /connect.lock
 /coverage/*
 /libpeerconnection.log
-npm-debug.log
+npm-debug.log*
 testem.log
 
 # custom

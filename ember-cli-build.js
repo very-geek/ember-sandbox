@@ -1,14 +1,22 @@
-var EmberApp = require('ember-cli/lib/broccoli/ember-app');
-var isProduction = process.env.EMBER_ENV === 'production';
-var isDevelopment = process.env.EMBER_ENV === 'development';
-var postcssOptions = {
+const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const isProduction = process.env.EMBER_ENV === 'production';
+const isDevelopment = process.env.EMBER_ENV === 'development';
+const postcssOptions = {
   rucksack: { alias: false, hexRGBA: false, fallbacks: true },
-  cssnano: { autoprefixer: false, core: isProduction, discardComments: isProduction, mergeIdents: false, reduceIdents: false, sourcemap: isDevelopment },
+  cssnano: {
+    autoprefixer: false,
+    core: isProduction,
+    discardComments: isProduction,
+    mergeIdents: false,
+    reduceIdents: false,
+    sourcemap: isDevelopment
+  },
   reporter: { plugins: ['postcss-browser-reporter'] }
 };
 
 module.exports = function(defaults) {
-  var app = new EmberApp(defaults, {
+  const app = new EmberApp(defaults, {
+    storeConfigInMeta: false,
     cssModules: {
       plugins: [
         require('postcss-import'),
@@ -49,8 +57,8 @@ module.exports = function(defaults) {
         srcDir: 'dist',
         import: {
           include: [
-            { path: 'standard.css', prepend: true },
-            { path: 'hack.css', prepend: true }
+            { path: 'hack.css', prepend: true },
+            { path: 'standard.css' }
           ]
         }
       }

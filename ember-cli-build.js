@@ -1,7 +1,12 @@
-const EmberApp = require('ember-cli/lib/broccoli/ember-app');
-const isProduction = process.env.EMBER_ENV === 'production';
-const isDevelopment = process.env.EMBER_ENV === 'development';
+const EmberApp = require('ember-cli/lib/broccoli/ember-app')
+const isProduction = process.env.EMBER_ENV === 'production'
 const postcssOptions = {
+  cssnext: {
+    features: {
+      browsers: '> 1%, last 3 versions, Firefox ESR, Opera 12.1, not ie <= 8',
+      customProperties: { preserve: true, warnings: false },
+    },
+  },
   rucksack: { alias: false, hexRGBA: false, fallbacks: true },
   cssnano: {
     autoprefixer: false,
@@ -9,24 +14,23 @@ const postcssOptions = {
     discardComments: isProduction,
     mergeIdents: false,
     reduceIdents: false,
-    sourcemap: isDevelopment
+    sourcemap: !isProduction,
   },
-  reporter: { plugins: ['postcss-browser-reporter'] }
-};
+  reporter: { plugins: ['postcss-browser-reporter'] },
+}
 
 module.exports = function(defaults) {
   const app = new EmberApp(defaults, {
     storeConfigInMeta: false,
     cssModules: {
       plugins: [
-        require('postcss-import'),
         require('postcss-extend'),
-        require('postcss-cssnext'),
+        require('postcss-cssnext')(postcssOptions.cssnext),
         require('postcss-fallback'),
         require('rucksack-css')(postcssOptions.rucksack),
         require('cssnano')(postcssOptions.cssnano),
         require('postcss-reporter')(postcssOptions.reporter),
-        require('postcss-browser-reporter')
+        require('postcss-browser-reporter'),
       ],
       virtualModules: {
         'ui-colors': {
@@ -48,22 +52,17 @@ module.exports = function(defaults) {
           'ui-deep-orange': '#ff5722',
           'ui-brown': '#795548',
           'ui-gray': '#9e9e9e',
-          'ui-blue-gray': '#607d8b'
+          'ui-blue-gray': '#607d8b',
         }
       }
     },
     nodeAssets: {
       hack: {
         srcDir: 'dist',
-        import: {
-          include: [
-            { path: 'hack.css', prepend: true },
-            { path: 'standard.css' }
-          ]
-        }
-      }
-    }
-  });
+        import: [{ path: 'hack.css', prepend: true }, { path: 'standard.css' }],
+      },
+    },
+  })
 
-  return app.toTree();
-};
+  return app.toTree()
+}

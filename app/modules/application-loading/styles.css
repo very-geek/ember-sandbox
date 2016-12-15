@@ -1,0 +1,244 @@
+.loader {
+  position: fixed 50% auto auto 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 200px;
+  height: 200px;
+  transform: translate(-50%, -50%);
+
+  perspective: 400px;
+  transform-type: preserve-3d;
+}
+
+.pitch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 120px;
+  height: 180px;
+  transform: rotateX(30deg);
+
+  border: 4px solid #133f57;
+  background-color: #1e3f57;
+  box-shadow: inset 0 0 0 2px #3c617d;
+
+  &::before {
+    content: '';
+    position: absolute;
+
+    width: 100%;
+    height: 2px;
+    background-color: #3c617d;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+    transform: rotateX(30deg);
+
+    border-radius: 50%;
+    border: 15px solid #1e3f57;
+    background-color: #3c617d;
+    box-shadow: 0 0 0 2px #3c617d;
+  }
+}
+
+.player {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 10px;
+  height: 10px;
+
+  margin-left: -6px;
+
+  border-radius: 20px;
+
+  background-color: #6bb2cd;
+
+  transform-type: preserve-3d;
+  transform-origin: 50% 50%;
+
+  animation: player 3s cubic-bezier(.45,.16,.55,.86) infinite;
+}
+
+.player:nth-child(1) {
+  transform: translateX(-40px) translateY(40px);
+  animation-name: player1;
+}
+
+.player:nth-child(2) {
+  transform: translateX(-16px) translateY(50px);
+  animation-name: player2;
+}
+
+.player:nth-child(3) {
+  transform: translateX(16px) translateY(50px);
+  animation-name: player3;
+}
+
+.player:nth-child(4) {
+  transform: translateX(40px) translateY(40px);
+  animation-name: player4;
+}
+
+.player:nth-child(5) {
+  transform: translateX(-38px) translateY(-14px);
+  animation-name: player5;
+}
+
+.player:nth-child(6) {
+  transform: translateX(-18px) translateY(10px);
+  animation-name: player6;
+}
+
+.player:nth-child(7) {
+  transform: translateX(18px) translateY(10px);
+  animation-name: player7;
+}
+
+.player:nth-child(8) {
+  transform: translateX(38px) translateY(-14px);
+  animation-name: player8;
+}
+
+.player:nth-child(9) {
+  transform: translateX(-14px) translateY(-56px);
+  animation-name: player9;
+}
+
+.player:nth-child(10) {
+  transform: translateX(14px) translateY(-56px);
+  animation-name: player10;
+}
+
+@keyframes player1 {
+  0%, 20%, 25%, 70%, 75%, 100% {
+    transform: translateX(-40px) translateY(40px);
+  }
+  45%, 50% {
+    transform: translateX(-28px) translateY(50px);
+  }
+}
+
+@keyframes player2 {
+  0%, 20%, 25%, 70%, 75%, 95% {
+    transform: translateX(-16px) translateY(50px);
+  }
+  45%, 50% {
+    transform: translateX(0) translateY(56px);
+  }
+}
+
+@keyframes player3 {
+  0%, 20%, 25%, 70%, 75%, 95% {
+    transform: translateX(16px) translateY(50px);
+  }
+  45%, 50% {
+    transform: translateX(28px) translateY(50px);
+  }
+}
+
+@keyframes player4 {
+  0%, 20%, 25%, 70%, 75%, 95% {
+    transform: translateX(40px) translateY(40px);
+  }
+  45%, 50% {
+    transform: translateX(44px) translateY(22px);
+  }
+}
+
+@keyframes player5 {
+  0%, 95% {
+    transform: translateX(-38px) translateY(-14px);
+  }
+  20%, 25% {
+    transform: translateX(-28px) translateY(-8px);
+  }
+  45%, 50% {
+    transform: translateX(-44px) translateY(22px);
+  }
+  70%, 75% {
+    transform: translateX(-18px) translateY(0);
+  }
+}
+
+@keyframes player6 {
+  0%, 95% {
+    transform: translateX(-18px) translateY(10px);
+  }
+  20%, 25% {
+    transform: translateX(0) translateY(0);
+  }
+  45%, 50% {
+    transform: translateX(-28px) translateY(-8px);
+  }
+  70%, 75% {
+    transform: translateX(0) translateY(-40px);
+  }
+}
+
+@keyframes player7 {
+  0%, 95% {
+    transform: translateX(18px) translateY(10px);
+  }
+  20%, 25% {
+    transform: translateX(28px) translateY(-8px);
+  }
+  45%, 50% {
+    transform: translateX(0) translateY(0);
+  }
+  70%, 75% {
+    transform: translateX(18px) translateY(0);
+  }
+}
+
+@keyframes player8 {
+  0%, 95% {
+    transform: translateX(38px) translateY(-14px);
+  }
+  20%, 25% {
+    transform: translateX(44px) translateY(-40px);
+  }
+  45%, 50% {
+    transform: translateX(28px) translateY(-8px);
+  }
+  70%, 75% {
+    transform: translateX(40px) translateY(-46px);
+  }
+}
+
+@keyframes player9 {
+  0%, 95% {
+    transform: translateX(-14px) translateY(-56px);
+  }
+  20%, 25% {
+    transform: translateX(-44px) translateY(-40px);
+  }
+  45%, 50% {
+    transform: translateX(-14px) translateY(-56px);
+  }
+  70%, 75% {
+    transform: translateX(-40px) translateY(-46px);
+  }
+}
+
+@keyframes player10 {
+  0%, 95% {
+    transform: translateX(14px) translateY(-56px);
+  }
+  20%, 25%, 70%, 75% {
+    transform: translateX(0) translateY(-66px);
+  }
+  45%, 50% {
+    transform: translateX(14px) translateY(-56px);
+  }
+}

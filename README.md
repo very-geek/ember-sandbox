@@ -95,3 +95,12 @@
 - 视频：
     - 总结：[Youtube](https://www.youtube.com/watch?v=QrNypFwF8Po) | [哔哩哔哩](http://www.bilibili.com/video/av6693855)
 </details>
+
+<details>
+    <summary>第 5 期：loading 和 error 子状态</summary>
+
+- 练习：本期练习的主要目的是理解 loading / error 子状态的定义和使用，最终效果可以参考：[ember-sandbox-005.surge.sh](http://ember-sandbox-005.surge.sh)
+    - 答案：[分支 005-final](https://github.com/very-geek/ember-sandbox/tree/005/final)
+- 视频：
+    - 总结：[Youtube](https://www.youtube.com/watch?v=acmOpirWccc) | [哔哩哔哩](http://www.bilibili.com/video/av7587044)
+</details>

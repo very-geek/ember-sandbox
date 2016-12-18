@@ -1,7 +1,6 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'ember-sandbox',
-    podModulePrefix: 'ember-sandbox/modules',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',

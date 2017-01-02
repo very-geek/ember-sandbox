@@ -20,6 +20,12 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    choiceI18n: {
+      enabled: true,
+      api: 'http://127.0.0.1:4000/v1',
+      pid: 2
     }
   };
 

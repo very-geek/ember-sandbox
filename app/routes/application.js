@@ -6,6 +6,12 @@ import get from 'ember-metal/get'
 export default Route.extend({
   ajax: inject(),
 
+  intl: inject(),
+
+  activate() {
+    get(this, 'intl').setLocale('en_us')
+  },
+
   setupController(controller) {
     this._super(...arguments)
     if (isNone(get(this, 'ajax.headers.Authorization'))) {

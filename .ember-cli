@@ -7,5 +7,6 @@
   */
   "disableAnalytics": true,
   "proxy": "http://127.0.0.1:4000",
-  "port": 1337
+  "port": 1337,
+  "ssl": true
 }

@@ -34,7 +34,7 @@ module.exports = function(/* env */) {
     * @type {Boolean}
     * @default "false"
     */
-    autoPolyfill: true,
+    autoPolyfill: false,
 
     /**
     * disablePolyfill prevents the polyfill from being bundled in the asset folder of the build
@@ -58,7 +58,15 @@ module.exports = function(/* env */) {
     */
     publicOnly: false,
 
-    inputPath: 'translations',
-    outputPath: 'translations'
+    /**
+    * Path where translations are kept.  This is relative to the project root.
+    * For example, if your translations are an npm dependency, set this to:
+    *`'./node_modules/path/to/translations'`
+    *
+    * @property inputPath
+    * @type {String}
+    * @default "translations"
+     */
+    inputPath: 'translations'
   };
 };

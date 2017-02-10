@@ -24,7 +24,7 @@ module.exports = function(environment) {
 
     choiceI18n: {
       enabled: true,
-      api: 'http://127.0.0.1:4000/v1',
+      api: 'http://116.62.101.195/v1',
       pid: 2,
       editorTheme: 'wireframe'
     }

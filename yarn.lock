@@ -19,7 +19,7 @@ acorn-jsx@^3.0.0:
   dependencies:
     acorn "^3.0.4"
 
-acorn@4.0.4:
+acorn@4.0.4, acorn@^4.0.4:
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-4.0.4.tgz#17a8d6a7a6c4ef538b814ec9abac2779293bf30a"
 
@@ -66,7 +66,7 @@ amd-name-resolver@0.0.5:
   dependencies:
     ensure-posix-path "^1.0.1"
 
-amd-name-resolver@0.0.6:
+amd-name-resolver@0.0.6, amd-name-resolver@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/amd-name-resolver/-/amd-name-resolver-0.0.6.tgz#d3e4ba2dfcaab1d820c1be9de947c67828cfe595"
   dependencies:
@@ -1095,7 +1095,22 @@ broccoli-css-modules@^0.5.3:
     rsvp "^3.2.1"
     symlink-or-copy "^1.1.6"
 
-broccoli-file-creator@^1.0.0:
+broccoli-dependency-funnel@^1.0.0:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/broccoli-dependency-funnel/-/broccoli-dependency-funnel-1.0.2.tgz#fdbbe3d71733ae3f4879b6b5e3e152b402341347"
+  dependencies:
+    broccoli-plugin "^1.3.0"
+    exists-sync "^0.0.4"
+    fs-tree-diff "^0.5.2"
+    heimdalljs "^0.2.1"
+    heimdalljs-logger "^0.1.7"
+    mkdirp "^0.5.1"
+    mr-dep-walk "^1.1.1"
+    path-posix "^1.0.0"
+    rimraf "^2.5.4"
+    symlink-or-copy "^1.1.8"
+
+broccoli-file-creator@^1.0.0, broccoli-file-creator@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/broccoli-file-creator/-/broccoli-file-creator-1.1.1.tgz#1b35b67d215abdfadd8d49eeb69493c39e6c3450"
   dependencies:
@@ -1124,7 +1139,7 @@ broccoli-funnel-reducer@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/broccoli-funnel-reducer/-/broccoli-funnel-reducer-1.0.0.tgz#11365b2a785aec9b17972a36df87eef24c5cc0ea"
 
-broccoli-funnel@^1.0.0, broccoli-funnel@^1.0.1, broccoli-funnel@^1.0.6, broccoli-funnel@^1.0.7:
+broccoli-funnel@^1.0.0, broccoli-funnel@^1.0.1, broccoli-funnel@^1.0.6, broccoli-funnel@^1.0.7, broccoli-funnel@^1.0.8:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/broccoli-funnel/-/broccoli-funnel-1.1.0.tgz#dfb91a37c902456456de4a40a1881948d65b27d9"
   dependencies:
@@ -2723,7 +2738,7 @@ exists-sync@0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/exists-sync/-/exists-sync-0.0.3.tgz#b910000bedbb113b378b82f5f5a7638107622dcf"
 
-exists-sync@0.0.4:
+exists-sync@0.0.4, exists-sync@^0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/exists-sync/-/exists-sync-0.0.4.tgz#9744c2c428cc03b01060db454d4b12f0ef3c8879"
 
@@ -3889,6 +3904,10 @@ lodash.debounce@^3.1.1:
   dependencies:
     lodash._getnative "^3.0.0"
 
+lodash.defaultsdeep@^4.5.1:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/lodash.defaultsdeep/-/lodash.defaultsdeep-4.6.0.tgz#bec1024f85b1bd96cbea405b23c14ad6443a6f81"
+
 lodash.find@^4.5.1:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.find/-/lodash.find-4.6.0.tgz#cb0704d47ab71789ffa0de8b97dd926fb88b13b1"
@@ -4210,6 +4229,14 @@ morgan@^1.5.2:
 mout@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/mout/-/mout-1.0.0.tgz#9bdf1d4af57d66d47cb353a6335a3281098e1501"
+
+mr-dep-walk@^1.1.1:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/mr-dep-walk/-/mr-dep-walk-1.1.2.tgz#77cd3196c034a80d8b492b3862eb3c4943dc7343"
+  dependencies:
+    acorn "^4.0.4"
+    amd-name-resolver "^0.0.6"
+    fs-extra "^2.0.0"
 
 ms@0.7.1:
   version "0.7.1"

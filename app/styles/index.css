@@ -1,3 +1,19 @@
 :global(.test-chart) {
-  width: 400px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+:global(.rect rect) {
+  opacity: 0.5;
+}
+
+:global(.line-path) {
+  fill: transparent;
+  stroke: steelblue;
+  stroke-width: 1.5;
+}
+
+:global(.area-path) {
+  fill: steelblue;
+  fill-opacity: 0.2;
 }

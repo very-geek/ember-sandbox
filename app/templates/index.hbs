@@ -1,10 +1,19 @@
-<div class="test-chart">
-  {{#ui-d3-chart model responsive=false as |chart|}}
-    {{chart.axis scale="band" position="bottom"}}
-    {{chart.axis scale="linear" position="left"}}
-    {{chart.area xScale="band" yScale="linear"}}
-    {{chart.line xScale="band" yScale="linear" curve="CatmullRom"}}
-    <!-- {{chart.rect xScale="band" yScale="linear" type="column" padding=0.6}} -->
-    <!-- {{chart.scatter xScale="band" yScale="linear" radius=3}} -->
-  {{/ui-d3-chart}}
-</div>
+{{#ui-d3-chart model responsive=false as |chart|}}
+  <!-- {{chart.axis scale="band" position="bottom" padding=8}} -->
+  <!-- {{chart.axis scale="linear" position="left" padding=4}} -->
+  <!-- {{chart.grid xScale="band" yScale="linear" style=(style opacity="0.1")}} -->
+  <!-- {{chart.rect xScale="band" yScale="linear" label="top outer gray" tipOn="mousemove"}} -->
+  {{chart.stack xScale="band" yScale="linear" group=true}}
+  <!-- {{chart.line xScale="linear" yScale="linear" curve="Cardinal" stroke="url(#hrainbow)" style=(style stroke-width="2")}} -->
+  <!-- {{chart.area xScale="linear" yScale="linear" curve="Cardinal" fill="url(#vrainbow)" style=(style fill-opacity="0.2")}} -->
+  <!-- {{chart.pie outerRadius="-50"}} -->
+  <!-- {{chart.donut outerRadius="-50" innerRadius="0.75" cornerRadius="5" padAngle="0.02"}} -->
+  {{chart.gradient name="hrainbow" direction="horizontal" colors="red orange yellow green indigo blue purple"}}
+  {{chart.gradient name="vrainbow" colors="0%:red 16.67%:orange 33.33%:yellow 50%:green 66.67%:indigo 83.33%:blue 100%:purple"}}
+{{/ui-d3-chart}}
+<!-- {{#ui-d3-chart model responsive=false as |chart|}} -->
+<!--   {{chart.axis scale="band" position="bottom" padding=8}} -->
+<!--   {{chart.axis scale="linear" position="left" padding=4}} -->
+<!--   {{chart.rect xScale="band" yScale="linear" label="top outer gray" tipOn="mousemove"}} -->
+<!--   {{chart.grid xScale="band" yScale="linear" style=(style opacity="0.1")}} -->
+<!-- {{/ui-d3-chart}} -->

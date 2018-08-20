@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"elixir.projectPath": "server",
+		"elixirLS.projectDir": "server",
+		"files.exclude": {
+			"**/.elixir_ls": true,
+			"**/.vscode": true,
+			"**/_build": true,
+			"**/deps": true,
+			"**/dist": true,
+			"**/node_modules": true,
+			"**/tmp": true,
+			"**/vendor": true
+		},
+		"window.zoomLevel": 1.25
+	}
+}

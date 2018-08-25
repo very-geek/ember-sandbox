@@ -18,15 +18,11 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "paths": {
-      "esc/tests/*": [
-        "tests/*"
-      ],
-      "esc/*": [
-        "app/*"
-      ],
-      "*": [
-        "types/*"
-      ]
+      "@ember-decorators/*": ["node_modules/@ember-decorators/*"],
+      "fetch": ["node_modules/ember-fetch"],
+      "esc/tests/*": ["tests/*"],
+      "esc/*": ["app/*"],
+      "*": ["types/*"]
     },
     "pretty": true,
     "strictNullChecks": true,
@@ -35,6 +31,7 @@
   },
   "include": [
     "app/**/*",
+    "mirage/**/*",
     "tests/**/*",
     "types/**/*"
   ]

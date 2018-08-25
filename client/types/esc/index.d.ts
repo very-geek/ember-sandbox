@@ -6,5 +6,3 @@ declare global {
   // interface Function extends Ember.FunctionPrototypeExtensions {}
 
 }
-
-export { };

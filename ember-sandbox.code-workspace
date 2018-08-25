@@ -17,6 +17,8 @@
 			"**/tmp": true,
 			"**/vendor": true
 		},
+		"tslint.enable": false,
+		"typescript.tsdk": "client/node_modules/typescript/lib",
 		"window.zoomLevel": 1.25
 	}
 }

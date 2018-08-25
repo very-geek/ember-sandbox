@@ -1,0 +1,15 @@
+<ol>
+  {{#each this.topics as |topic|}}
+    <li>
+      <h1>{{topic.subject}}</h1>
+      <p>{{topic.description}}</p>
+      <figure>
+        <img src={{topic.illustration}} alt={{topic.subject}}>
+      </figure>
+    </li>
+  {{else}}
+    <li>
+      <p>Has nothing to show</p>
+    </li>
+  {{/each}}
+</ol>

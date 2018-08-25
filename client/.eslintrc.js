@@ -15,6 +15,9 @@ module.exports = {
   env: {
     browser: true
   },
+  globals: {
+    server: true,
+  },
   rules: {
   },
   overrides: [
@@ -30,6 +33,7 @@ module.exports = {
     },
     {
       files: [
+        '.template-lintrc.js',
         'ember-cli-build.js',
         'testem.js',
         'blueprints/*/index.js',

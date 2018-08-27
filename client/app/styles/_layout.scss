@@ -1,0 +1,13 @@
+@for $i from 1 through 6 {
+  h#{$i} {
+    margin: 0;
+
+    &.title {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+figure {
+  @extend %image;
+}

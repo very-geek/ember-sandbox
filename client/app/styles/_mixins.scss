@@ -1,4 +1,4 @@
-@mixin multiLineEllipsis(
+@mixin multiline-ellipsis(
   $line-height: 1.5rem,
   $line-count: 1,
   $background-color: transparent
@@ -10,12 +10,14 @@
   text-align: justify;
   margin-right: -1em;
   padding-right: 1em;
+
   &:before {
     content: '...';
     position: absolute;
     right: 0;
     bottom: 0;
   }
+
   &:after {
     content: '';
     position: absolute;
@@ -29,10 +31,46 @@
 
 @for $i from 1 through 6 {
   .has-ellipsis-#{$i} {
-    @include multiLineEllipsis(
+    @include multiline-ellipsis(
       $line-height: 1.5rem,
       $line-count: $i,
       $background-color: $white
     );
+  }
+}
+
+%list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+%image {
+  position: relative;
+  display: block;
+  margin: 0;
+
+  > img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@mixin size($width: auto, $height: auto) {
+  width: $width;
+  height: $height;
+}
+
+@mixin ratio($h, $v) {
+  padding-top: #{$v / $h * 100 * 1%};
+
+  > img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
   }
 }

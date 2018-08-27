@@ -1,2 +1,33 @@
 .topics {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(237px, 1fr));
+
+  @extend %list-reset;
+}
+
+.topics > li {
+  @media screen and (min-width: 1028px) {
+    &:nth-child(1),
+    &:nth-child(2) {
+      grid-column: span 2;
+
+      > figure {
+        @include ratio(3, 1);
+
+        > img {
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  > header {
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  > figure {
+    @include ratio(16, 9);
+  }
 }

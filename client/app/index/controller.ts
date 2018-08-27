@@ -3,7 +3,7 @@ import Controller from '@ember/controller';
 
 export default class IndexController extends Controller {
 
-  amount: number = 10;
+  amount: number = 6
 
   @computed('model', 'amount')
   get topics() {

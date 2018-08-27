@@ -17,6 +17,10 @@
 			"**/tmp": true,
 			"**/vendor": true
 		},
+		"npm.includeDirectories": [
+			"client"
+		],
+		"search-node-modules.path": "client/node_modules",
 		"tslint.enable": false,
 		"typescript.tsdk": "client/node_modules/typescript/lib",
 		"window.zoomLevel": 1.25

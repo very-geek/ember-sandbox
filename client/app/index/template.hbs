@@ -1,15 +1,13 @@
-<ol>
-  {{#each this.topics as |topic|}}
-    <li>
-      <h1>{{topic.subject}}</h1>
-      <p>{{topic.description}}</p>
-      <figure>
-        <img src={{topic.illustration}} alt={{topic.subject}}>
-      </figure>
-    </li>
-  {{else}}
-    <li>
-      <p>Has nothing to show</p>
-    </li>
-  {{/each}}
-</ol>
+<section>
+  <div class="field">
+    <label for="amount-of-topics">Amount:</label>
+    {{input id="amount-of-topics" type="number" step=3 value=this.amount}}
+  </div>
+</section>
+
+<section>
+  <h1>Topics</h1>
+  <Topics @topics={{this.topics}} class="topics" as |topic|>
+    <Topic @topic={{topic}} />
+  </Topics>
+</section>

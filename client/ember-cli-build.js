@@ -15,6 +15,10 @@ module.exports = function(defaults) {
       }
     },
 
+    sassOptions: {
+      includePaths: ["app"]
+    }
+
   });
 
   app.import('node_modules/normalize.css/normalize.css', { prepend: true });

@@ -6,7 +6,7 @@ import { random } from '../utils';
 export default Factory.extend({
 
   subject(): string {
-    return faker.lorem.sentence(random(3, 5));
+    return faker.lorem.sentence(random(2, 3));
   },
 
   description(): string {
@@ -14,9 +14,9 @@ export default Factory.extend({
   },
 
   illustration(): string {
-    const w = random(231, 281);
-    const h = random(119, 169);
-    return picsum(w, h, { grayscale: true });
+    const w = random(281, 331);
+    const h = random(169, 219);
+    return picsum(w, h);
   }
 
 });

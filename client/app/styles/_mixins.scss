@@ -1,0 +1,38 @@
+@mixin multiLineEllipsis(
+  $line-height: 1.5rem,
+  $line-count: 1,
+  $background-color: transparent
+) {
+  overflow: hidden;
+  position: relative;
+  line-height: $line-height;
+  max-height: $line-height * $line-count;
+  text-align: justify;
+  margin-right: -1em;
+  padding-right: 1em;
+  &:before {
+    content: '...';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    background: $background-color;
+  }
+}
+
+@for $i from 1 through 6 {
+  .has-ellipsis-#{$i} {
+    @include multiLineEllipsis(
+      $line-height: 1.5rem,
+      $line-count: $i,
+      $background-color: $white
+    );
+  }
+}
